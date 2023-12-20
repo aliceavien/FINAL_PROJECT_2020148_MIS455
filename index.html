@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Country Data App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <h1 class="text-center mb-4 bg-info text-white p-3">Weather & Country Data App</h1>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <div class="logo"><img class="rounded" width=80 px height=80px src="images\logo.png"></div>
+            <a class="navbar-brand" href="#"><i>Weather & Country App</i></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                    <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" id="searchInput" placeholder="Enter country or city name">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" onclick="search()">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+
+        <div class="weather mb-4" style="display: none;">
+            <h2 class="city"></h2>
+            <div class="temp"></div>
+            <div class="humidity"></div>
+            <div class="wind"></div>
+            <div class="wName"></div>
+            <img class="weather-icon img-fluid" alt="Weather Icon">
+        </div>
+        <div id="countryData" class="row countryData" style="display: none;"></div>
+        <div class="btn btn-dark" onclick="showMore()" id="show" style='display: none;'>Show More</div>
+        <div class="btn btn-dark my-4" onclick="hide()" style="display: none;" id="hide">Hide Details</div>
+        <div class="error alert alert-danger" style="display: none;">City not found</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
